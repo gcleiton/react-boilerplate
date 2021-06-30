@@ -1,0 +1,8 @@
+{
+  "name": "react-boilerplate",
+  "version": "0.1.0",
+  "description": "A personal boilerplate that I use in my React applications",
+  "author": "Gabriel Cleiton <ccgabrielcc2609@gmail.com>",
+  "repository": "https://github.com/gcleiton/react-boilerplate.git",
+  "license": "MIT"
+}
