@@ -4,8 +4,10 @@ module.exports = {
   coverageDirectory: 'coverage',
   testPathIgnorePatterns: ['<rootDir>/node_modules/'],
   testEnvironment: 'jsdom',
-  preset: 'ts-jest',
-  setupFilesAfterEnv: ['<rootDir>/.jest/jest.setup.js'],
+  transform: {
+    '^.+\\.(ts|tsx)?$': 'babel-jest'
+  },
+  setupFilesAfterEnv: ['<rootDir>/src/main/config/jest.setup.ts'],
   moduleNameMapper: {
     '@/(.*)': '<rootDir>/src/$1'
   }

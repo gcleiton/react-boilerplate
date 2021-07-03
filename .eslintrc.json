@@ -22,6 +22,6 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "@typescript-eslint/consistent-type-definitions": "off",
-    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off"
   }
 }
