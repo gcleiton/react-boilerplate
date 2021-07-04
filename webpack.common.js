@@ -6,7 +6,6 @@ module.exports = {
   entry: './src/main/index.tsx',
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: '/',
     filename: 'main-bundle-[contenthash].js',
     assetModuleFilename: 'assets/[hash][ext]'
   },

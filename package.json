@@ -6,6 +6,7 @@
   "repository": "https://github.com/gcleiton/react-boilerplate.git",
   "license": "MIT",
   "scripts": {
+    "start": "node server",
     "dev": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "jest --passWithNoTests --no-cache --runInBand",
@@ -63,8 +64,13 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "express-history-api-fallback": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-components": "^5.3.0"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }

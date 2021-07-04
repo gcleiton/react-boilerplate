@@ -7,7 +7,7 @@ module.exports = merge(common, {
   externals: {
     react: 'React',
     'react-dom': 'ReactDOM',
-    'styled-components': 'styled-components'
+    'styled-components': 'styled'
   },
   plugins: [
     new HtmlWebpackPlugin({
