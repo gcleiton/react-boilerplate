@@ -1,9 +1,12 @@
-const common = require('./webpack.common')
+const path = require('path')
 const { merge } = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const common = require('./webpack.common')
+const env = require('./env')
+
 module.exports = merge(common, {
-  mode: 'production',
+  mode: env.modes.prod,
   externals: {
     react: 'React',
     'react-dom': 'ReactDOM',
@@ -11,7 +14,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/template.prod.html'
+      template: path.resolve(env.paths.public, 'template.prod.html')
     })
   ]
 })

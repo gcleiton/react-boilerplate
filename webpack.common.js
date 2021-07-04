@@ -2,10 +2,12 @@ const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
+const env = require('./env')
+
 module.exports = {
   entry: './src/main/index.tsx',
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: env.paths.output,
     filename: 'main-bundle-[contenthash].js',
     assetModuleFilename: 'assets/[hash][ext]'
   },
@@ -14,7 +16,7 @@ module.exports = {
       {
         test: /\.(js|ts)x?$/,
         loader: 'babel-loader',
-        exclude: path.resolve(__dirname, 'node_modules/')
+        exclude: env.paths.modules
       },
       {
         test: /\.(jpe?g|png|gif)$/i,
@@ -33,13 +35,13 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
-      '@': path.join(__dirname, 'src')
+      '@': env.paths.source
     }
   },
   plugins: [
     new CleanWebpackPlugin(),
     new FaviconsWebpackPlugin({
-      logo: './public/favicon.svg'
+      logo: path.resolve(env.paths.public, 'favicon.svg')
     })
   ]
 }
