@@ -1,5 +1,5 @@
 {
   "*.{ts, tsx}": [
-    "eslint 'src/**' --max-warnings=0 --fix"
+    "yarn lint"
   ]
 }
