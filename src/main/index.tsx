@@ -1,10 +1,7 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import GlobalStyles from '@/presentation/styles/global'
 
-ReactDOM.render(
-  <Fragment>
-    <GlobalStyles />
-  </Fragment>,
-  document.getElementById('main')
-)
+import Router from '@/main/routes/router'
+import '@/presentation/styles/global'
+
+ReactDOM.render(<Router />, document.getElementById('main'))
