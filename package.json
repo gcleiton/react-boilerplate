@@ -11,9 +11,9 @@
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint src --max-warnings=0 --fix",
     "test": "jest --passWithNoTests --no-cache --runInBand",
-    "test:watch": "yarn test -- --watch",
-    "test:staged": "yarn test -- --findRelatedTests",
-    "test:ci": "yarn test -- --coverage",
+    "test:watch": "yarn test --watch",
+    "test:staged": "yarn test --findRelatedTests",
+    "test:ci": "yarn test --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
