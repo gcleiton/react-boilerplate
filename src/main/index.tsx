@@ -2,6 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import Router from '@/main/routes/router'
-import '@/presentation/styles/global'
+import GlobalStyles from '@/presentation/styles/global'
 
-ReactDOM.render(<Router />, document.getElementById('main'))
+ReactDOM.render(
+  <>
+    <GlobalStyles />
+    <Router />
+  </>,
+  document.getElementById('main')
+)
