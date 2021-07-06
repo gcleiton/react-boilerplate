@@ -1,1 +1,1 @@
-export { default as ReactLogo } from '@/presentation/assets/icons/react-logo.svg'
+export { default as ReactLogo } from './icons/react-logo.svg'

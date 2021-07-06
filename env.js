@@ -12,6 +12,6 @@ module.exports = {
     modules: path.resolve(__dirname, 'node_modules')
   },
   server: {
-    port: 3000
+    port: 3001
   }
 }
