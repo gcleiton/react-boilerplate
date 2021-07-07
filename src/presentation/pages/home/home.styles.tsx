@@ -9,7 +9,7 @@ export const Container = styled.div`
   max-height: 100vh;
   line-height: 3rem;
 
-  color: white;
+  color: ${(props) => props.theme.colors.white};
   background-color: #03103b;
   background-image: linear-gradient(
     135deg,
