@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import Router from '@/main/routes/router'
-import GlobalStyles from '@/presentation/styles/global'
+import { GlobalStyles } from '@/presentation/styles'
 
 ReactDOM.render(
   <>
