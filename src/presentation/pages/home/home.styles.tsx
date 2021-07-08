@@ -8,15 +8,11 @@ export const Container = styled.div`
     flex-direction: column;
 
     max-height: 100vh;
-    line-height: ${(props) => props.theme.spacings.huge};
+    line-height: ${theme.spacings.huge};
 
-    color: ${(props) => props.theme.colors.white};
-    background-color: ${(props) => props.theme.colors.primary};
-    background-image: linear-gradient(
-      135deg,
-      ${theme.colors.gradientPrimary} 0%,
-      ${theme.colors.gradientSecondary} 35%
-    );
+    color: ${theme.colors.white};
+    background-color: ${theme.colors.primary};
+    background-image: ${theme.gradients.diagonalLinear};
   `}
 `
 
@@ -33,7 +29,7 @@ export const Main = styled.div`
 export const StyledIcon = styled(Icon)`
   ${({ theme }) => css`
     width: min(25rem, 100%);
-    animation: ${(props) => props.theme.keyframes.spin} 10s linear infinite;
+    animation: ${theme.keyframes.spin} 10s linear infinite;
   `}
 `
 

@@ -50,6 +50,11 @@ export default {
     gray: '#95a5a6'
   },
 
+  gradients: {
+    diagonalLinear:
+      'linear-gradient(135deg, rgba(64, 219, 216, 0.15) 0%, rgba(3, 16, 59, 0.15) 35%)'
+  },
+
   spacings: {
     xxsmall: '.15rem',
     xsmall: '.3rem',

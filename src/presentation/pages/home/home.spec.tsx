@@ -1,6 +1,7 @@
 import React from 'react'
-import { screen, render } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import Home from './home'
+import { render } from '@/presentation/helpers/test-helper'
 
 render(<Home />)
 
