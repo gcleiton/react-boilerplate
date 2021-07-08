@@ -1,21 +1,19 @@
 import { Icon } from '@/presentation/components'
 
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
 
-  max-height: 100vh;
-  line-height: 3rem;
+    max-height: 100vh;
+    line-height: ${theme.spacings.huge};
 
-  color: white;
-  background-color: #03103b;
-  background-image: linear-gradient(
-    135deg,
-    rgba(64, 219, 216, 0.15) 0%,
-    rgba(3, 16, 59, 0.15) 35%
-  );
+    color: ${theme.colors.white};
+    background-color: ${theme.colors.primary};
+    background-image: ${theme.gradients.diagonalLinear};
+  `}
 `
 
 export const Main = styled.div`
@@ -29,69 +27,69 @@ export const Main = styled.div`
 `
 
 export const StyledIcon = styled(Icon)`
-  width: min(25rem, 100%);
-
-  animation: spin 10s linear infinite;
-
-  @keyframes spin {
-    100% {
-      -webkit-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
+  ${({ theme }) => css`
+    width: min(25rem, 100%);
+    animation: ${theme.keyframes.spin} 10s linear infinite;
+  `}
 `
 
 export const Title = styled.h1`
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 0.15rem;
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.huge};
+    font-weight: ${theme.font.bold};
+    letter-spacing: ${theme.spacings.xxsmall};
+  `}
 `
 
 export const Subtitle = styled.p`
-  color: lightgray;
-  font-size: 1.3rem;
-  font-style: italic;
+  ${({ theme }) => css`
+    color: lightgray;
+    font-size: ${theme.font.sizes.large};
+    font-style: italic;
+  `}
 `
 
 export const Footer = styled.footer`
-  height: 10vh;
-  text-align: center;
-  color: lightgray;
+  ${({ theme }) => css`
+    height: 10vh;
+    text-align: center;
+    color: lightgray;
 
-  a {
-    position: relative;
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
+    a {
+      position: relative;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
 
-    bottom: 2px; // fix align text
+      bottom: 2px; // fix align text
 
-    &:hover {
-      font-weight: 500;
-    }
+      &:hover {
+        font-weight: ${theme.font.bold};
+      }
 
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      right: 0;
-      width: 0;
-      height: 2px;
-      background-color: white;
-      transition: width cubic-bezier(0.25, 1, 0.5, 1) 600ms;
-    }
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: ${theme.transitions.roundTrip};
+      }
 
-    @media (hover: hover) and (pointer: fine) {
-      &:hover::before {
-        left: 0;
-        right: auto;
-        width: 100%;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover::before {
+          left: 0;
+          right: auto;
+          width: 100%;
+        }
+      }
+
+      svg {
+        vertical-align: middle;
+        margin-right: ${theme.spacings.xsmall};
       }
     }
-
-    svg {
-      vertical-align: middle;
-      margin-right: 0.3rem;
-    }
-  }
+  `}
 `
